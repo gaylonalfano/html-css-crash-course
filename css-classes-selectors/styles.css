@@ -1,0 +1,73 @@
+/* p { */
+/*   color: blue */
+/* } */
+
+/* p.error { */
+/*   color: red; */
+/* } */
+
+/* p.success { */
+/*   color: green; */
+/* } */
+
+/* p.success.feedback { */
+/*   border: 1px dashed green; */
+/* } */
+
+/* /1* Target an id using # *1/ */
+/* div#content { */
+/*   background-color: #ebebeb; */
+/*   padding: 20px; */
+/* } */
+
+/* /1* Target children elements of a parent *1/ */
+/* div p { */
+/*   color: purple; */
+/* } */
+
+/* /1* Target error class inside div element *1/ */
+/* div .error { */
+/*   color: yellow; */
+/* } */
+
+/* /1* Target attributes like input type="number" inside a div *1/ */
+/* /1* input[type="number"] { *1/ */
+/* /1*   max-width: 10px; *1/ */
+/* /1* } *1/ */
+/* a[href*="thenetninja"] { */
+/*   background-color: #3dd13d; */
+/*   color: white; */
+/*   text-decoration: none; */
+/*   font-weight: bold; */
+/*   text-transform: uppercase; */
+/* } */
+/* /1* * = Includes *1/ */
+/* a[href*="google"] { */
+/*   color: white; */
+/*   background: red; */
+/*   border: 2px solid blue; */
+/* } */
+/* /1* $ = Ends with *1/ */
+/* a[href$=".com"] { */
+/*   color: white; */
+/*   background: red; */
+/*   border: 2px solid blue; */
+/* } */
+
+
+/* Inheritance */
+div {
+  color: lightcoral;
+  border: 1px solid grey;
+  margin: 40px;
+  font-weight: bold;
+}
+p {
+  border: inherit;
+  margin: inherit;
+  color: crimson;
+}
+/* Lower is more specific */
+p {
+  color: orange;
+}
