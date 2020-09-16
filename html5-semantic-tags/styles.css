@@ -1,3 +1,167 @@
-div {
-    background: red;
+/* Perform a CSS Reset */
+body, ul, li, h1, h2, a {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+
+header {
+  background-color: #F63232;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  /* Bring header to front (1) */
+  z-index: 1;
+  /* Anchor it relative to the viewport/page */
+  top: 0;
+  left: 0;
+}
+
+/* Wrap the Marioclub header with a border and white */
+header h1 {
+  display: inline-block;
+  color: white;
+  border: 8px solid white;
+  padding: 6px 8px;
+  /* Add a curve to the border */
+  border-radius: 36px;
+}
+
+/* Set parent element to have position: relative so we can later add a child el inside */
+.banner {
+  position: relative;
+}
+.banner img {
+  /* Make image fit within viewport */
+  max-width: 100%;
+}
+
+/* Set welcome message inside banner parent */
+.banner .welcome {
+  background-color: #FEB614;
+  position: absolute;
+  color: white;
+  padding: 30px;
+  left: 0;
+  /* Keep it relative as screen size adjusts by using % */
+  top: 30%; 
+}
+
+/* Increase the size of our h2 text */
+.banner h2 {
+  font-size: 74px;
+}
+
+.banner h2 span {
+  font-size: 1.3em;
+}
+
+
+
+/* Sticky the nav element to be fixed under banner after scrolling down */
+nav {
+  background-color: #F4F4F4;
+  padding: 20px;
+  position: sticky;
+  /* When it gets N pixels from top it will stick */
+  top: 104px;
+}
+
+/* Make all li elements nowrap */
+nav ul {
+  white-space: nowrap; 
+  /* Centralize things */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Make the li elements sit side-by-side */
+nav li {
+  width: 25%;
+  display: inline-block;
+  font-size: 24px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+nav li a.join {
+  color: #F63232;
+}
+
+
+main {
+  /* Go max width for any screen size */
+  max-width: 100%;
+  /* Set the width to 1200px so if screen is larger it'll only be 1200px wide */
+  width: 1200px;
+  /* Auto distribute the excess to left/right sides */
+  margin: 80px auto;
+  padding: 0 40px;
+  /* Make padding account for the max-width instead of in addition to */
+  box-sizing: border-box;
+}
+
+article h2 {
+  color: #F63232;
+  font-size: 48px;
+}
+
+article p {
+  /* Set line-height to be 2 times the size of default p (16px) */
+  line-height: 2em;
+  color: #4b4b4b;
+}
+
+.images {
+  /* Center the images */
+  text-align: center;
+  margin: 80px 0;
+  white-space: nowrap;
+}
+.images li {
+  /* Position images side-by-side */
+  display: inline-block;
+  /* Make li element width be 40% of its parent ul element */
+  width: 40%;
+  /* Have the two images evenly side-by-side taking 50% (40% of parent + 10% margin) */
+  margin: 20px 5%;
+}
+.images li img {
+  /* Make actual image width be 100% of parent li width */
+  max-width: 100%;
+}
+
+
+section.join {
+  /* Style the section and form to join */
+  background: #F4F4F4;
+  text-align: center;
+  padding: 60px 20px;
+  color: #4b4b4b;
+
+}
+
+.join h2 {
+  font-size: 36px;
+}
+
+form input {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 28px;
+  /* Add a border color so later can add hover focus effects to change color */
+  border: 4px solid white;
+}
+
+footer {
+  background: #f63232;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
