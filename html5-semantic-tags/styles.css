@@ -182,7 +182,7 @@ nav li a:hover {
 form input:focus {
   border: 4px dashed #4b4b4b;
   /* Remove the default focus outline */
-  /* outline: none; */
+  outline: none;
 }
 
 /* If validation is valid then change border color to green */
@@ -211,4 +211,80 @@ p::selection {
 /* Inject content after the element */
 p::after {
   content: "..."
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  /* Target elements and styles at <= 1400px */ 
+  /* We ONLY apply overrides here. Don't have to duplicate */
+  /* Reduce font size as screen shrinks */
+  .banner .welcome h2 {
+    font-size: 60px;
+  }
+
+  /* Reduce nav li font size as well */
+  nav li {
+    font-size: 18px
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .banner .welcome h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner .welcome {
+    /* Make the welcome div go back to its original position under banner */
+    position: relative;
+    /* Center the text so it's not on the left */
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .banner .welcome br {
+    /* Now make welcome text all one line */
+    /* Remove the <br> within the <h2>??? */
+    display: none;
+  }
+
+  .banner .welcom h2 {
+    font-size: 25px;
+  }
+
+  .banner .welcome span {
+    /* Make span font size same as the parent h2 element */
+    font-size: 1em;
+  }
+
+  .images li {
+    /* Make the images stack instead of side-by-side */
+    /* Going to make the width to 100% and display: block */
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Adjust the nav links to larger size for mobile users */
+  nav li {
+    font-size: 20px;
+    /* Make them vertically stacked */
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+  }
+
+  /* Make nav sticky up at the top once it reaches top */
+  nav {
+    top: 0px;
+  }
+
+  /* Make the top header relative so it doesn't always fix at top as you scroll */
+  header {
+    position: relative;
+  }
 }
